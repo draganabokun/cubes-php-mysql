@@ -1,20 +1,10 @@
 <?php
+session_start();
 
-$link = mysqli_connect('127.0.0.1', 'cubes', 'cubes', 'cubesphp');
 
-if ($link === false) {
-	die('MySQL Error: ' . mysqli_connect_error());
-}
+require_once __DIR__ .'/models/m_brands.php';
 
-$query = "SELECT * FROM brands";
-
-$result = mysqli_query($link, $query);
-
-if ($result === false) {
-	die('MySQL Error: ' . mysqli_error($link));
-}
-
-$brands = mysqli_fetch_all($result, MYSQLI_ASSOC);
+$brands = brandsFetchAll();
 
 
 require_once __DIR__ .'/views/layout/header.php';
