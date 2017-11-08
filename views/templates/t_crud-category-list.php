@@ -45,7 +45,7 @@
 										<?php echo htmlspecialchars($category['title']);?>
 									</td>
 									<td>
-										<?php echo htmlspecialchars($category['group_name']);?>
+										<?php echo htmlspecialchars($category['group_title']);?>
 									</td>
 									<td class="text-center">
 										<div class="btn-group">
