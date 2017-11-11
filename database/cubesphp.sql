@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 03, 2017 at 04:14 PM
+-- Generation Time: Nov 09, 2017 at 10:13 AM
 -- Server version: 10.1.25-MariaDB-1
 -- PHP Version: 7.1.8-1ubuntu1
 
@@ -42,12 +42,12 @@ INSERT INTO `brands` (`id`, `title`, `website_url`) VALUES
 (3, 'Bosh', ''),
 (4, 'Gorenje', ''),
 (5, 'HTC', ''),
-(6, 'Huawei', ''),
+(6, 'Huawei', 'http://cubes.edu.rs'),
 (7, 'LG', ''),
 (8, 'Samsung', ''),
 (9, 'Sony', ''),
 (16, 'Siemens', ''),
-(17, 'Vivax', '');
+(17, 'Vivax', 'http://cubes.edu.rs');
 
 -- --------------------------------------------------------
 
@@ -169,10 +169,10 @@ INSERT INTO `products` (`id`, `brand_id`, `title`, `description`, `specification
 (39, 1, 'iPhone6 S', 'iPhone6 S', '', '39999.99', 12, 1, 0, '0.00', '2016-03-21 18:00:00'),
 (40, 1, 'iPhone6 SE', 'iPhone6 SE', '', '37999.99', 11, 1, 0, '0.00', '2016-03-21 18:00:00'),
 (41, 1, 'iPhone5', 'iPhone5', '', '32999.99', 10, 1, 0, '0.00', '2016-03-21 18:00:00'),
-(42, NULL, 'Masina za sivenje', 'Masina za sivenje', 'Masina za sivenje', '1200.00', 1, NULL, 0, '0.00', '2017-11-13 08:22:20'),
-(43, NULL, 'Televizor 8X56P', 'Televizor 8X56P', NULL, '11800.00', 36, 2, 0, '0.00', '2017-11-20 07:19:15'),
-(44, 1, 'iPod Nano', 'iPod Nano', NULL, '9800.00', 3, NULL, 0, '0.00', '2017-11-14 05:12:12'),
-(45, 2, 'Pegla 1200W', 'Pegla 1200W', NULL, '3200.00', 1, 99, 0, '0.00', '2017-11-14 08:19:18');
+(42, NULL, 'Masina za sivenje', 'Masina za sivenje', 'Masina za sivenje', '1200.00', 1, NULL, 0, '0.00', '2017-10-28 13:21:00'),
+(43, NULL, 'Televizor 8X56P', 'Televizor 8X56P', NULL, '11800.00', 36, 2, 0, '0.00', '2017-10-28 13:21:00'),
+(44, 1, 'iPod Nano', 'iPod Nano', NULL, '9800.00', 3, NULL, 0, '0.00', '2017-10-28 13:21:00'),
+(45, 2, 'Pegla 1200W', 'Pegla 1200W', NULL, '3200.00', 1, 99, 0, '0.00', '2017-10-28 13:21:00');
 
 -- --------------------------------------------------------
 

@@ -73,7 +73,7 @@ function brandsUpdateOneById($id, $data) {
 	$setPart = implode(',', $setParts);
 	
 	$query = "UPDATE `brands` SET " . $setPart . " WHERE `id` = '" . dbEscape($id) . "'";
-
+	
 	return dbQuery($query);
 }
 

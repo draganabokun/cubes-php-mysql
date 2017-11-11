@@ -4,19 +4,18 @@
  * @return resource
  */
 function dbGetLink() {
-    
-        static $link;
-        
-        if (!isset($link)) 
-        {
-            $link = mysqli_connect('localhost', 'cubes', 'cubes', 'cubesphp');
-
-            if (!$link) {
-            die('MySQL Connect Error: ' . mysqli_connect_error());
-            }
-        }
-
+	
+	static $link;
+	
+	if (!isset($link)) {
 		
+		$link = mysqli_connect('127.0.0.1', 'cubes', 'cubes', 'cubesphp');
+		
+		if (!$link) {
+			die('MySQL Connect Error: ' . mysqli_connect_error());
+		}
+	}
+	
 	return $link;
 }
 

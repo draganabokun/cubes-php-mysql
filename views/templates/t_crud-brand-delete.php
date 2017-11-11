@@ -15,7 +15,7 @@
 				<div class="row">
 					<div class="col-md-12">
 						<h2>
-                                                    CRUD Brand - Delete brand #<?php echo htmlspecialchars($brand['id']); ?>
+							CRUD Brand - Delete brand #<?php echo htmlspecialchars($brand['id']);?>
 						</h2>
 					</div>
 				</div>
@@ -30,8 +30,8 @@
 								<div class="form-group">
 									<div class="col-md-6 col-md-offset-3 jumbotron">
 										<strong>
-											#<?php echo htmlspecialchars($brand['id']); ?> - 
-											<?php echo htmlspecialchars($brand['title']); ?>
+											#<?php echo htmlspecialchars($brand['id']);?> - 
+											<?php echo htmlspecialchars($brand['title']);?>
 										</strong>
 									</div>
 								</div>

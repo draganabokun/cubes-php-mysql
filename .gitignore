@@ -1,13 +1,9 @@
-
 # Created by https://www.gitignore.io/api/macos,windows,netbeans
 
 ### macOS ###
 *.DS_Store
 .AppleDouble
 .LSOverride
-
-# Icon must end with two \r
-Icon
 
 # Thumbnails
 ._*
@@ -30,9 +26,7 @@ Temporary Items
 
 ### NetBeans ###
 nbproject/private/
-build/
 nbbuild/
-dist/
 nbdist/
 .nb-gradle/
 

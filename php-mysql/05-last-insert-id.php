@@ -8,16 +8,15 @@ if ($link === false) {
 
 $title = 'Group title';
 
-$query = "INSERT INTO groups (title) VALUES ('" . mysqli_real_escape_string($link, $title) . "')";
+$query = "INSERT INTO groups (title) VALUES ('". mysqli_real_escape_string($link, $title) . "')";
 
 $result = mysqli_query($link, $query);
 
-if ($result === false)
-{
-    die('My SQL error: ' . mysql_error($link));
+if ($result === false) {
+	die('MySQL error: ' . mysqli_errno($link));
 }
-
 
 $newId = mysqli_insert_id($link);
 
 echo "New group has been added with ID: " . $newId;
+

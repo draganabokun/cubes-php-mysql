@@ -8,8 +8,8 @@ require_once __DIR__ . '/m_database.php';
  */
 function categoriesFetchAll() {
 	$query = "SELECT `categories`.*, `groups`.`title` AS group_title "
-                . "FROM `categories` "
-                . "LEFT JOIN `groups` ON `categories`.`group_id` = `groups`.`id`";
+			. "FROM `categories` "
+			. "LEFT JOIN `groups` ON `categories`.`group_id` = `groups`.`id`";
 	
 	
 	return dbFetchAll($query);

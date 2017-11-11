@@ -1,7 +1,3 @@
 # cubes-php-mysql
-
-
-
-
-Cubes PHP MySQL
+Cubes PHP i MySQL
 test

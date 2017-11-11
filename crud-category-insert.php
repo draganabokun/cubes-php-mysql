@@ -1,15 +1,14 @@
 <?php
 session_start();
 
-require_once __DIR__ .'/models/m_categories.php';
-require_once __DIR__ .'/models/m_groups.php';
-
+require_once __DIR__ . '/models/m_categories.php';
+require_once __DIR__ . '/models/m_groups.php';
 
 //ovde se prihvataju vrednosti polja, popisati sve kljuceve i pocetne vrednosti
 $formData = array(
-	'title'=>'',
-        'group_id'=>'',
-        'description'=>''
+	'title' => '',
+	'group_id' => '',
+	'description' => ''
 );
 
 //ovde se smestaju greske koje imaju polja u formi
