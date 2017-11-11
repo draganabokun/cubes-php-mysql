@@ -87,3 +87,6 @@ function entityNameGetCount() {
 	
 	return dbFetchColumn($query);
 }
+
+
+
