@@ -4,10 +4,10 @@ require_once __DIR__ . '/m_database.php';
 
 /**
  * 
- * @return array Aarray of associative arrays that represent rows
+ * @return array Array of associative arrays that represent rows
  */
-function groupsFetchAll() {
-	$query = "SELECT `groups`.* FROM `groups`";
+function tagsFetchAll() {
+	$query = "SELECT `tags`.* FROM `tags`";
 	
 	
 	return dbFetchAll($query);
@@ -17,10 +17,10 @@ function groupsFetchAll() {
  * @param scalar $id
  * @return array Associative array that represent one row
  */
-function groupsFetchOneById($id) {
+function tagsFetchOneById($id) {
 	
-	$query = "SELECT `groups`.* "
-			. "FROM `groups` "
+	$query = "SELECT `tags`.* "
+			. "FROM `tags` "
 			. "WHERE `id` = '" . dbEscape($id) . "'";
 	
 	return dbFetchOne($query);
@@ -30,9 +30,9 @@ function groupsFetchOneById($id) {
  * @param int $id
  * @return int Affected rows
  */
-function groupsDeleteOneById($id) {
+function tagsDeleteOneById($id) {
 	
-	$query = "DELETE FROM `groups` "
+	$query = "DELETE FROM `tags` "
 			. "WHERE `id` = '" . dbEscape($id) . "'";
 	
 	return dbQuery($query);
@@ -42,7 +42,7 @@ function groupsDeleteOneById($id) {
  * @param array $data Row to insert, associative array
  * @return type
  */
-function groupsInsertOne(array $data) {
+function tagsInsertOne(array $data) {
 	
 	$columnsPart = "(`" . implode('`, `', array_keys($data)) . "`)";
 	
@@ -54,7 +54,7 @@ function groupsInsertOne(array $data) {
 	
 	$valuesPart = "(" . implode(', ', $values) . ")";
 	
-	$query = "INSERT INTO `groups` " . $columnsPart . " VALUES " . $valuesPart;
+	$query = "INSERT INTO `tags` " . $columnsPart . " VALUES " . $valuesPart;
 
 	
 	dbQuery($query);
@@ -62,7 +62,7 @@ function groupsInsertOne(array $data) {
 	return dbLastInsertId();
 }
 
-function groupsUpdateOneById($id, $data) {
+function tagsUpdateOneById($id, $data) {
 	
 	$setParts = array();
 	
@@ -72,7 +72,7 @@ function groupsUpdateOneById($id, $data) {
 	
 	$setPart = implode(',', $setParts);
 	
-	$query = "UPDATE `groups` SET " . $setPart . " WHERE `id` = '" . dbEscape($id) . "'";
+	$query = "UPDATE `tags` SET " . $setPart . " WHERE `id` = '" . dbEscape($id) . "'";
 
 	return dbQuery($query);
 }
@@ -80,22 +80,13 @@ function groupsUpdateOneById($id, $data) {
 /**
  * @return int Count of all rows in table
  */
-function groupsGetCount() {
+function tagsGetCount() {
 	$link = dbGetLink();
 	
-	$query = "SELECT COUNT(`id`) FROM `groups`";
+	$query = "SELECT COUNT(`id`) FROM `tags`";
 	
 	return dbFetchColumn($query);
 }
 
-/**
- * 
- * @return array of all id's in table
- */
-function groupsGetAllIds() {
-    $link = dbGetLink();
-	
-	$query = "SELECT `id` FROM `groups`";
-	
-	return dbQuery($query);
-}
+
+

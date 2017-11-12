@@ -13,7 +13,7 @@ $id = (int) $_GET['id'];
 $brand = brandsFetchOneById($id);
 
 if (empty($brand)) {
-	die('Trazeni brand ne postoji');
+	die('Trazeni brend ne postoji');
 }
 
 if (isset($_POST["task"]) && $_POST["task"] == "delete") {

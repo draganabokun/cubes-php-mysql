@@ -4,7 +4,7 @@ require_once __DIR__ . '/m_database.php';
 
 /**
  * 
- * @return array Aarray of associative arrays that represent rows
+ * @return array Array of associative arrays that represent rows
  */
 function categoriesFetchAll() {
 	$query = "SELECT `categories`.*, `groups`.`title` AS group_title "
