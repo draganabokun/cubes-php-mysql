@@ -88,14 +88,28 @@ function groupsGetCount() {
 	return dbFetchColumn($query);
 }
 
-/**
- * 
- * @return array of all id's in table
- */
-function groupsGetAllIds() {
-    $link = dbGetLink();
+
+function groupsGetList() {
 	
-	$query = "SELECT `id` FROM `groups`";
+	$query = "SELECT `groups`.* FROM `groups` ORDER BY `groups`.`title`";
 	
-	return dbQuery($query);
+	$groups = dbFetchAll($query);
+
+	$groupList = [];
+	
+	foreach ($groups as $group) {
+		
+//		$key = $group['id'];
+//		$value = $group['title'];
+//		
+//		$groupList[$key] = $value;
+		
+		
+		$groupList[$group['id']] = $group['title'];
+	}
+	
+	return $groupList;
 }
+
+
+

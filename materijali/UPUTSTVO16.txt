@@ -1,0 +1,59 @@
+Zadatak 1:
+
+Kreirati tabelu "sections" sa sledecim kolonama:
+
+id - integer autoincerment - primarni kljuc
+title - varchar(255)
+
+Tabela sections treba da cuva sekcije vesti (na neki nacin to je kategorija vesti)
+
+
+
+
+Zadatak 2:
+
+Kreirati tabelu "news" sa sledecim kolonama
+
+id - integer autoincerment - primarni kljuc
+section_id - integer - preneseni kljuc iz tabele section
+title - varchar(255)
+description - text - moze da bude null
+content - longtext - moze da bude null
+created_at - datetime - moze da bude null
+
+Tabela news cuva vesti, kolona content treba da sadrzi onaj veliki tekst vesti
+
+
+
+
+Zadatak 3:
+
+Kreirati kompletan CRUD za sekcije tj za tabelu "sections", dakle trebate da imate sledece fajlove:
+	- /crud-section-list.php
+	- /crud-section-insert.php
+	- /crud-section-edit.php
+	- /crud-section-delete.php
+	
+
+Ti fajlovi trebaju da se zastite da ne moze da im se pristupi ako niste ulogovani.
+
+Prezentacionu logiku napravite sami na osnovu prezentacionih logika za grupe, moracete malo da se snadjete.
+
+
+
+Zadatak 4:
+
+Kreirati kompletan CRUD za vesti tj za tabelu "news", dakle trebate da imate sledece fajlove:
+	- /crud-news-list.php
+	- /crud-news-insert.php
+	- /crud-news-edit.php
+	- /crud-news-delete.php
+
+Ti fajlovi trebaju da se zastite da ne moze da im se pristupi ako niste ulogovani.
+
+Prezentaciona logika vam je data u prilogu, nije kompletna moracete da je ispravite. For petlje u prezentacionim logikama su cisto da popune prostor, apsolutno ih trebate zameniti sa foreach petljama.
+
+
+Zadatak 5:
+
+Commit & push i posaljite mi mail kada zavrsite ;)

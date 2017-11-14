@@ -73,7 +73,7 @@ function brandsUpdateOneById($id, $data) {
 	$setPart = implode(',', $setParts);
 	
 	$query = "UPDATE `brands` SET " . $setPart . " WHERE `id` = '" . dbEscape($id) . "'";
-
+	
 	return dbQuery($query);
 }
 
@@ -86,4 +86,20 @@ function brandsGetCount() {
 	$query = "SELECT COUNT(`id`) FROM `brands`";
 	
 	return dbFetchColumn($query);
+}
+
+
+function brandsGetList() {
+	
+	$query = "SELECT `brands`.* FROM `brands` ORDER BY `brands`.`title`";
+	
+	$brands = dbFetchAll($query);
+	
+	$brandList = [];
+	
+	foreach ($brands as $brand) {
+		$brandList[$brand['id']] = $brand['title'];
+	}
+	
+	return $brandList;
 }
