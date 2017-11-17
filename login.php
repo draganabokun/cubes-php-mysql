@@ -44,12 +44,14 @@ if (isset($_POST["task"]) && $_POST["task"] == "login") {
 	//Ukoliko nema gresaka 
 	if (empty($formErrors)) {
 		//Uradi akciju koju je korisnik trazio
+            $user = checkCredentials($formData['username'], $formData['password']);
+                    
 		
-		if (checkCredentials($formData['username'], $formData['password'])) {
+		if (!empty($user)) {
 			
 			//uspesno je ulogovan
-			
-			$_SESSION['user_is_logged_in'] = true;
+
+                        $_SESSION['logged_in_user'] = $user;
 			
 			header('Location: /index.php');
 			die;

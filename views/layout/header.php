@@ -87,13 +87,14 @@
 									</li>
 									<?php } else { ?>
 									<li class="dropdown">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Admin</a>
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i><?php echo htmlspecialchars($_SESSION['logged_in_user']['username']); ?></a>
 										<ul class="dropdown-menu" role="menu">
 											<li><a href="/crud-product-list.php">Crud Products</a></li>
 											<li><a href="/crud-brand-list.php">Crud Brands</a></li>
 											<li><a href="/crud-category-list.php">Crud Categories</a></li>
 											<li><a href="#">Crud Groups</a></li>
 											<li><a href="#">Crud Tags</a></li>
+                                                                                        <li><a href="/crud-user-list.php">Crud Users</a></li>
 											<li><hr></li>
 											<li><a href="/logout.php"><i class="glyphicon glyphicon-log-out"></i> Logout</a></li>
 										</ul>

@@ -3,7 +3,11 @@
     <div class="container">
         <div class="header">
             <h2 class="page-title">
-                <span>Proizvod - Brend Naziv proizvoda</span>
+                <span>
+                    Proizvod - 
+                    <?php echo htmlspecialchars($product['brand_title']); ?>
+                    <?php echo htmlspecialchars($product['title']); ?>
+                </span>
             </h2>
         </div>
     </div>
@@ -17,43 +21,45 @@
             <div class="col-md-7 project-photos">
                 <img 
                     class="img-responsive center-block" 
-                    alt="Product title" 
-                    src="/skins/tema/img/portfolio/enkel-home-blue.png"
+                    alt="<?php echo htmlspecialchars($product['title']); ?>" 
+                    src="/uploads/products/<?php echo htmlspecialchars($product['photo_file_name']); ?>"
                     >
             </div>
             <div class="col-md-5 sidebar sidebar-right">
                 <!-- quick details -->
                 <div class="block">
                     <h3 class="block-title">
-                        <span>Product title</span>
+                        <span><?php echo htmlspecialchars($product['title']); ?></span>
                     </h3>
                     <dl>
                         <dt>Brend:</dt>
                         <dd>
-                            Brand title
+                            <?php echo htmlspecialchars($product['brand_title']); ?>
                         </dd>
 
                         <dt>Kategorija:</dt>
                         <dd>
-                            <a href="/category.php">
-                                Category
+                            <a href="/category.php?id=<?php echo htmlspecialchars($product['category_id']); ?>">
+                                <?php echo htmlspecialchars($product['category_title']); ?>
                             </a>
                         </dd>
 
                         <dt>Opis:</dt>
                         <dd>
-                            Nec elementum eros nec? Et lacus sociis rhoncus dictumst in! Hac ultrices, in? Mauris magna porta.
+                            <?php echo htmlspecialchars($product['description']); ?>
                         </dd>
 
                         <dt>Tagovi:</dt>
                         <dd>
-                            HTML5, CSS3, PHP, Photoshop
+                            <?php foreach($productTags as $tag) { ?>
+                            <label><?php echo htmlspecialchars($tag['title']); ?></label>, 
+                            <?php } ?>
                         </dd>
                     </dl>
                 </div>
                 <h4>
                     <strong>Cena: </strong>
-                    65000.00 din
+                    <?php echo htmlspecialchars($product['price']); ?>
                     <a href="#" class="btn btn-primary pull-right">Kupi</a>
                 </h4>
             </div>
@@ -63,9 +69,7 @@
                 Specifikacija
             </h3>
             <div class="block">
-                Nec elementum eros nec?
-                Et lacus sociis rhoncus dictumst in!
-                Hac ultrices, in? Mauris magna porta.
+           <?php echo htmlspecialchars($product['specification']); ?>
             </div>
         </div>
     </div>
