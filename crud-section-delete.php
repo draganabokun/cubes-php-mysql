@@ -39,8 +39,7 @@ if (isset($_POST["task"]) && $_POST["task"] == "delete") {
     } else {
         die ('Ne mozete obrisati kategoriju u kojoj postoje vesti');
     }
-	
-	
+		
 }
 
 require_once __DIR__ . '/views/layout/header.php';

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 19, 2017 at 04:20 PM
+-- Generation Time: Nov 19, 2017 at 06:04 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -124,7 +124,7 @@ CREATE TABLE `news` (
 
 INSERT INTO `news` (`id`, `section_id`, `title`, `description`, `content`, `photo_filename`, `created_at`) VALUES
 (1, 2, 'One su nepoÅ¾eljne u Kini', 'Vizu nisu dobile ni manekenke ÄiÄ‘i Hadid (zbog poreÄ‘enja sa Budom) i Adrijana Lima (diplomatski problem)', 'KINESKE vlasti odbile su da izdaju vizu pop pevaÄici Keti Peri (33), koja je sutra trebalo da nastupi na reviji kuÄ‡e \"Viktorijas sikret\" u Å angaju. Ova komunistiÄka zemlja zamerila je Keti Å¡to se 2015. na koncertu u \"Tajpej areni\" ogrnula tajvanskom zastavom, ali i Å¡to je nastupala u kostimu sa slikom suncokreta, jer je taj cvet bio simbol Studentskog pokreta \"Suncokret\" koji je 2014. protestovao zbog kineskog trgovinskog sporazuma. Vizu nisu dobile ni manekenke ÄiÄ‘i Hadid (zbog poreÄ‘enja sa Budom) i Adrijana Lima (diplomatski problem).', '1_nepozeljne_u_kini.jpg', '2017-11-01 23:12:44'),
-(2, 4, 'Hrabre slike sveta', 'Pobednici Berlina, Kana, Venecije pred publikom na festivalu autorskog filma. Ostvarenja odvaÅ¾nih autora koja probijaju sve zadate granice, kliÅ¡ee i zabrane', 'Pod metaforiÄnim naslovom \"Duh `67.\" FAF Ä‡e prikazati 91 ostvarenje, meÄ‘u kojima su i pobednici najveÄ‡ih svetskih festivala. U Glavnom programu videÄ‡emo 22 filma, a u trku za Gran-pri \"Aleksandar SaÅ¡a PetroviÄ‡\" ulazi devet ostvarenja; dokumentarci \"Makala\" Emanuela Grasa (kanska nagrada u \"Nedelji kritike\"), i \"Kaniba\" Verane Paravel i Lusjena Kastenja Tejlora (nagrada Å¾irija u Veneciji), \"Felisite\" Alena Gomisa (Srebrni medved u Berlinu), \"Barbara\" Matjea Amalrika (nagrada u Hamburgu). U konkurenciji su i \"ÄŒovek od integriteta\" Mohamada Rasulofa (kanska nagrada u programu \"Izvestan pogled\"), \"Kada dan nije imao ime\" Teone Strugar Mitevske, \"Projekat Florida\" Å ona Bejkera (nagrada kritike u Hamburgu). Tu su i dva debitantska filma - \"Starateljstvo\" Gzavijea Legrana (\"Srebrni lav\" za reÅ¾iju i \"Lav\" buduÄ‡nosti u Veneciji), i \"Vojnici. PriÄa iz Ferentarija\" Ivane MladenoviÄ‡.', '2_Starateljstvo-film.jpg', '2017-11-14 12:52:00'),
+(2, 4, 'Hrabre slike sveta', 'Pobednici Berlina, Kana, Venecije pred publikom na festivalu autorskog filma. Ostvarenja odvaÅ¾nih autora koja probijaju sve zadate granice, kliÅ¡ee i zabrane', 'Pod metaforiÄnim naslovom \"Duh `67.\" FAF Ä‡e prikazati 91 ostvarenje, meÄ‘u kojima su i pobednici najveÄ‡ih svetskih festivala. U Glavnom programu videÄ‡emo 22 filma, a u trku za Gran-pri \"Aleksandar SaÅ¡a PetroviÄ‡\" ulazi devet ostvarenja; dokumentarci \"Makala\" Emanuela Grasa (kanska nagrada u \"Nedelji kritike\"), i \"Kaniba\" Verane Paravel i Lusjena Kastenja Tejlora (nagrada Å¾irija u Veneciji), \"Felisite\" Alena Gomisa (Srebrni medved u Berlinu), \"Barbara\" Matjea Amalrika (nagrada u Hamburgu). U konkurenciji su i \"ÄŒovek od integriteta\" Mohamada Rasulofa (kanska nagrada u programu \"Izvestan pogled\"), \"Kada dan nije imao ime\" Teone Strugar Mitevske, \"Projekat Florida\" Å ona Bejkera (nagrada kritike u Hamburgu). Tu su i dva debitantska filma - \"Starateljstvo\" Gzavijea Legrana (\"Srebrni lav\" za reÅ¾iju i \"Lav\" buduÄ‡nosti u Veneciji), i \"Vojnici. PriÄa iz Ferentarija\" Ivane MladenoviÄ‡.', '2_starateljstvo-film.jpg', '2017-11-14 12:52:00'),
 (3, 5, 'Kragujevac: Svat pucao iz gasnog piÅ¡tolja', 'KragujevaÄka policija oduzela je gasni piÅ¡tolj od muÅ¡karca (28) iz AranÄ‘elovca, iz kojeg je pucano iz vozila u svadbenoj koloni', 'KragujevaÄka policija oduzela je gasni piÅ¡tolj od muÅ¡karca (28) iz AranÄ‘elovca, iz kojeg je pucano iz vozila u svadbenoj koloni, preneli su danas lokalni mediji.\r\n\r\nPolicajci su zaustavili kolonu svatova kod stadiona \"ÄŒika DaÄa\" u Kragujevcu i kod mladiÄ‡a iz AranÄ‘elovca pronaÅ¡li i oduzeli gasni piÅ¡tolj iz kojeg je pucano.\r\n\r\nProtiv osobe koja je pucala biÄ‡e podneta kriviÄna prijava.', '3_lisice.jpg', '2017-11-06 20:30:12'),
 (6, 5, 'GreÅ¡kom ga optuÅ¾ili za zloÄin, pa sad tuÅ¾i drÅ¾avu', 'OsloboÄ‘en Milan DobriÄ‡, osumnjiÄen da je usmrtio poÅ¡tara. Nije bilo dokaza da je pucao u Sretena AnÄ‘elkoviÄ‡a', 'ZBOG neosnovanog liÅ¡avanja slobode, drÅ¾anja u pritvoru, duÅ¡evnih patnji i bolova koje je pretrpeo, Milan DobriÄ‡ (59) koji je uhapÅ¡en zbog sumnje da je pre 15 godina brutalno ubio poÅ¡tara Sretena AnÄ‘elkoviÄ‡a (54) u Zemunu, presavio je tabak i reÅ¡io da tuÅ¾i drÅ¾avu. On je pre dva dana puÅ¡ten na slobodu jer protiv njega nema dokaza da je poÄinio ovo delo.\r\n\r\nDobriÄ‡ je uhapÅ¡en krajem septembra zbog sumnje da je 25. decembra 2002. sa dva hica iz piÅ¡tolja usmrtio Sretena AnÄ‘elkoviÄ‡a. Ubistvo se dogodilo u ulazu stambene zgrade u Prvomajskoj ulici u Zemunu, kada je nepoznati muÅ¡karac priÅ¡ao poÅ¡taru s leÄ‘a i pucao mu u vrat i leÄ‘a.', '6_greskom-optuzili.jpg', '2017-11-18 22:12:14'),
 (7, 4, 'NEMA KOMPROMISA SA UMETNOÅ Ä†U', 'VeliÄkoviÄ‡ev Å¾ivotni put i Å¡ta je video u ranim radovima Marine AbramoviÄ‡', 'VeÄeras (19) u Galeriji RIMA u Beogradu premijerno Ä‡e biti predstavljena nova dela Vladimira VeliÄkoviÄ‡a. Ovaj umetnik je u okviru ciklusa predavanja \"Susreti sa stvaraocima â€“ masterklas\" u SANU govorio o svojim poÄecima, nadahnuÄ‡ima i izazovima jednog umetnika nekad i sad.', '7_kultura.jpg', '2017-11-18 23:36:41'),
@@ -258,7 +258,7 @@ INSERT INTO `sections` (`id`, `title`) VALUES
 (7, 'DruÅ¡tvo'),
 (8, 'Vesti'),
 (9, 'Vremenska prognoza'),
-(10, 'Sport i rekreacija');
+(11, 'Sport');
 
 -- --------------------------------------------------------
 
@@ -281,6 +281,30 @@ INSERT INTO `tags` (`id`, `title`) VALUES
 (3, 'Pobednik sajma tehnike'),
 (4, 'Garancija 2 godine'),
 (5, 'Garancija 5 godina');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` char(20) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `first_name` varchar(255) DEFAULT NULL,
+  `last_name` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `email`, `first_name`, `last_name`, `created_at`) VALUES
+(1, 'aleksandar.dimic', 'd5908e4aa76277878259ed57c19c5f78', 'aleksandar.dimic@cubes.rs', 'Aleksandar', 'Dimic', '2017-11-17 14:00:24'),
+(2, 'cubes', 'd5908e4aa76277878259ed57c19c5f78', '', 'saa', 'sASA', '2017-11-17 14:45:03');
 
 --
 -- Indexes for dumped tables
@@ -366,7 +390,7 @@ ALTER TABLE `groups`
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `polaznici`
@@ -390,7 +414,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `sections`
 --
 ALTER TABLE `sections`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `tags`
