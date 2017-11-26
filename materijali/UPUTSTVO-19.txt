@@ -1,0 +1,71 @@
+Svi zadaci se rade na projektu cubes-php-mysql, kada zavrsite pushujte!!!
+
+
+
+Zadatak 1:
+
+Zavrsiti stranicu /sale.php koja prikazuje proizvode na akciji uz pomoc paginacije.
+Proizvod je na akciji ako ima polje on_sale = 1.
+
+Fajl /sale.php ukljucuje fajl /views/templates/t_products.php to treba izmeniti,
+napraviti /views/templates/t_sale.php fajl u odnosu na prethodne template-e.
+
+
+
+
+Zadatak 2:
+
+Na stranici /index.php se prikazuju 4 najnovija proizvoda na akciji, uvezati to.
+
+
+
+
+Zadatak 3:
+
+Napraviti stranicu /brand.php koja prikazuje proizvode iz jednog brenda, naravno uz paginaciju.
+Kako stranica prikazuje proizvode iz jednog brenda treba joj proslediti i id brenda.
+
+Kreirati i template /views/templates/t_brand.php na osnovu prethodnih.
+
+
+
+Zadatak 4:
+
+U /views/layout/footer.php fajlu se nalaze neki brand-ovi. Treba to uvezati na taj nacin 
+da se izvlaci 6 random brendova (hint " ORDER BY RAND()" ).
+
+Kada se klikne na jedan brend treba da se ide na stranicu koja 
+prikazuje proizvode iz tog brenda.
+
+
+
+Zadatak 5:
+
+
+
+U svaki uradjeni CRUD dodati prenos poruka o izvrsenim akcijama.
+Da podsetim u pitanju je $_SESSION['system_message']
+
+
+
+
+
+Zadatak 6: NIJE OBAVEZAN
+U prilogu su dati fajlovi:
+
+profile-preview.php - Stranica za prikaz infomacija o profilu ulogovanog korisnika
+profile-edit.php - Stranica gde ulogovani korisnik moze da izmeni svoje podatke
+profile-change-password.php - Stranica gde ulogovani korisnik menja svoj password
+
+Svaki od fajlova ima svoj odgovarajuci template, kompletno sve kopirati u projekat.
+
+U /views/layout/header.php fajlu, iznad linka za logout dodati link:
+
+<a href="/crud-user-list.php">Profile</a>
+
+preko koga se dolazi do stranice za prikaz profila.
+
+
+Treba dovrsiti stranice tako da pre svega budu zasticene tj da ne moze da im se pristupi ako korisnik nije ulogovan.
+
+Nakon toga uvezati sve stranice.

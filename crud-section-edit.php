@@ -59,7 +59,9 @@ if (isset($_POST["task"]) && $_POST["task"] == "save") {
 		//Uradi akciju koju je korisnik trazio
 		
 		sectionsUpdateOneById($section['id'], $formData);
-		
+                
+	        $_SESSION['system_message'] = "Uspesno ste izmenili kategoriju vesti " .  $section['title'];
+	
 		header('Location: /crud-section-list.php');
 		die();
 	}

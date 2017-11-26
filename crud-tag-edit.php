@@ -1,6 +1,13 @@
 <?php
 session_start();
 
+require_once __DIR__ . '/models/m_users.php';
+
+if (!isUserLoggedIn()) {
+	header('Location: /login.php');
+	die();
+}
+
 require_once __DIR__ . '/models/m_tags.php';
 
 if (empty($_GET['id'])) {
@@ -50,6 +57,9 @@ if (isset($_POST["task"]) && $_POST["task"] == "save") {
 		//Uradi akciju koju je korisnik trazio
 		
 		tagsUpdateOneById($tag['id'], $formData);
+                
+                $_SESSION['system_message'] = "Uspesno ste izmenili tag " .  $tag['title'];
+
 		
 		header('Location: /crud-tag-list.php');
 		die();

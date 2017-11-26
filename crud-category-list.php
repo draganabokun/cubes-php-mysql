@@ -11,6 +11,13 @@ if (!isUserLoggedIn()) {
 
 require_once __DIR__ . '/models/m_categories.php';
 
+if (isset($_SESSION['system_message']))
+{
+    $systemMessage = $_SESSION['system_message'];
+    
+    unset($_SESSION['system_message']);
+}
+
 $categories = categoriesFetchAll();
 
 require_once __DIR__ . '/views/layout/header.php';

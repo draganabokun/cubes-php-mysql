@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 19, 2017 at 06:04 PM
+-- Generation Time: Nov 27, 2017 at 12:19 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -49,8 +49,7 @@ INSERT INTO `brands` (`id`, `title`, `website_url`) VALUES
 (8, 'Samsung', ''),
 (9, 'Sony', ''),
 (10, 'Siemens', ''),
-(11, 'Vivax', ''),
-(12, 'Pegla na paru', 'http://www.sams.com');
+(11, 'Vivax', '');
 
 -- --------------------------------------------------------
 
@@ -76,11 +75,7 @@ INSERT INTO `categories` (`id`, `title`, `description`, `group_id`) VALUES
 (4, 'Ves Masina', '', 2),
 (5, 'Sporet', '', 2),
 (6, 'Fen za kosu', '', 2),
-(7, 'Laptop', '', 3),
-(8, '', '', 0),
-(9, '', '', 0),
-(10, 'Pegla na paru', 'fdfdf', 2),
-(11, 'Pegla na paru', 'fdfd', 2);
+(7, 'Laptop', '', 3);
 
 -- --------------------------------------------------------
 
@@ -130,7 +125,9 @@ INSERT INTO `news` (`id`, `section_id`, `title`, `description`, `content`, `phot
 (7, 4, 'NEMA KOMPROMISA SA UMETNOÅ Ä†U', 'VeliÄkoviÄ‡ev Å¾ivotni put i Å¡ta je video u ranim radovima Marine AbramoviÄ‡', 'VeÄeras (19) u Galeriji RIMA u Beogradu premijerno Ä‡e biti predstavljena nova dela Vladimira VeliÄkoviÄ‡a. Ovaj umetnik je u okviru ciklusa predavanja \"Susreti sa stvaraocima â€“ masterklas\" u SANU govorio o svojim poÄecima, nadahnuÄ‡ima i izazovima jednog umetnika nekad i sad.', '7_kultura.jpg', '2017-11-18 23:36:41'),
 (8, 7, 'NAÅ LI SMO ENISA, HEROJA SA KOÅ ARA', '\"Ostao sam bez noge, imam geler u glavi, ali sam ponosan Å¡to sam branio svoju zemlju\"', 'NaÅ¡li smo Enisa! Nakon teksta u kojem smo pisali o Darku GajiÄ‡u, koji je Å¾eleo da pronaÄ‘e svog ratnog druga Enisa SuljeviÄ‡a sa Kosova 1999. javio nam se veliki broj njegovih poznanika i prijatelja. Danas ratni vojni invalid u penziji i heroj sa KoÅ¡ara Å¾ivi u Prijepolju, sreÄ‡no je oÅ¾enjen i ima troje dece.', '8_heroj_sa_kosara.jpg', '2017-11-18 23:41:02'),
 (9, 8, 'NE VERUJU VUÄŒIÄ†U, ÄŒEKAJU JANUAR', 'Ovo su prve reakcije OPOZICIJE na odluku SNS o izborima', 'Dok koalicioni partneri SNS socijalisti hvale odluku naprednjaka da se uz gradske sledeÄ‡e godine ne odrÅ¾e i vanredni parlamentarni izbori, opozicja poruÄuje, grubo reÄeno, da lideru SNS Aleksandru VuÄiÄ‡u ne veruje, i da joÅ¡ niÅ¡ta nije gotovo.', '9_jankovic.jpg', '2017-11-18 23:43:45'),
-(10, 9, 'Danas oblaÄno i hladno, mestimiÄno kiÅ¡a, na planinama slab sneg', 'U Srbiji Ä‡e danas biti oblaÄno i hladno, mestimiÄno sa kiÅ¡om u viÅ¡im planinskim predelima jugozapadne Srbije slab sneg.', 'Vetar slab i umeren, istoÄni i severoistoÄni. NajniÅ¾a temperatura od 3 do 7 C, najvisa od 5 do 10 C, saopÅ¡tio je RepubliÄki hidrometeoroloski zavod.\r\n\r\nI u Beogradu oblaÄno i hladno, povremeno sa slabom kiÅ¡om. Vetar slab i umeren, istoÄni. NajniÅ¾a temperatura 4, najvisa 8 C.', '10_kisni_dan.jpg', '2017-11-19 14:49:01');
+(10, 9, 'Danas oblaÄno i hladno, mestimiÄno kiÅ¡a, na planinama slab sneg', 'U Srbiji Ä‡e danas biti oblaÄno i hladno, mestimiÄno sa kiÅ¡om u viÅ¡im planinskim predelima jugozapadne Srbije slab sneg.', 'Vetar slab i umeren, istoÄni i severoistoÄni. NajniÅ¾a temperatura od 3 do 7 C, najvisa od 5 do 10 C, saopÅ¡tio je RepubliÄki hidrometeoroloski zavod.\r\n\r\nI u Beogradu oblaÄno i hladno, povremeno sa slabom kiÅ¡om. Vetar slab i umeren, istoÄni. NajniÅ¾a temperatura 4, najvisa 8 C.', '10_kisni_dan.jpg', '2017-11-19 14:49:01'),
+(11, 7, 'STAN ZA 20.000 EVRA', 'Ovo su izuzetno povoljne cene malih stanova u najveÄ‡im gradovima Srbije. Izdvajaju se kako po ceni, tako i po lokaciji.', 'Beograd, naselje ViÅ¡njiÄka banja. Stan ima 25 kvadratnih metara i smeÅ¡ten je u mirnom delu grada na svega 15minuta voÅ¾nje gradskim prevozom od centra grada. Cena je 20.000 evra.', '11_jeftini_stanovi.jpg', '2017-11-25 23:27:49'),
+(12, 5, 'ssssssggggg', 'sss', 'sss', '', '2017-11-26 16:26:38');
 
 -- --------------------------------------------------------
 
@@ -203,38 +200,38 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `brand_id`, `title`, `photo_filename`, `description`, `specification`, `price`, `quantity`, `category_id`, `on_sale`, `discount`, `created_at`) VALUES
-(7, 1, 'Apple iPhone7 32GB', '7_lisice.jpg_1511096692', 'Mobilni Telefon Apple iPhone7 32GB', '', '98546.21', 23, 6, 0, '0.00', '2016-06-12 12:53:00'),
-(8, 1, 'Apple iPhone7 64GB', '', 'Mobilni Telefon Apple iPhone7 64GB', '', '112345.12', 2, 1, 0, '0.00', '2016-12-13 13:53:00'),
-(9, 1, 'Apple iPhone7 32GB Gold', '', 'Mobilni Telefon Apple iPhone7 32GB Gold', '', '101234.23', 1, 1, 0, '0.00', '2016-03-14 14:53:00'),
-(10, 1, 'Apple iPhone8 32GB', '', 'Mobilni Telefon Apple iPhone8 32GB', '', '141889.32', 12, 1, 1, '15.00', '2017-04-15 15:53:00'),
-(11, 1, 'Apple iPhone8 64GB', '', 'Mobilni Telefon Apple iPhone8 64GB', '', '151339.32', 2, 1, 0, '0.00', '2017-06-16 16:53:00'),
-(12, 1, 'Apple iPhone8 32GB Gold', '', 'Mobilni Telefon Apple iPhone8 32GB Gold', '', '161323.37', 0, 1, 0, '0.00', '2017-08-17 17:53:00'),
-(13, 8, 'Samsung Galaxy S8', '', 'Mobilni Telefon Samsung Galaxy S8', '', '99876.34', 12, 1, 0, '0.00', '2017-06-18 18:53:00'),
-(14, 8, 'Samsung Galaxy S7', '', 'Mobilni Telefon Samsung Galaxy S7', '', '69887.34', 3, 1, 0, '0.00', '2016-07-19 14:53:00'),
-(15, 8, 'Samsung Galaxy S6', '', 'Mobilni Telefon Samsung Galaxy S6', '', '55763.34', 3, 1, 0, '0.00', '2015-02-20 11:53:00'),
-(16, 6, 'Huawei P10', '', 'Mobilni Telefon Huawei P10', '', '67898.77', 6, 1, 0, '0.00', '2016-11-21 12:53:00'),
-(17, 6, 'Huawei P9', '', 'Mobilni Telefon Huawei P9', '', '65632.33', 12, 1, 0, '0.00', '2015-03-22 12:53:00'),
-(18, 5, 'HTC Desire 820', '', 'Mobilni Telefon HTC Desire 820', '', '32456.76', 3, 1, 0, '0.00', '2014-08-23 12:53:00'),
-(19, 5, 'HTC One A9', '', 'Mobilni Telefon HTC One A9', '', '42323.47', 11, 1, 1, '20.00', '2016-05-24 12:53:00'),
-(20, 5, 'HTC U11', '', 'Mobilni Telefon HTC U11', '', '55736.43', 7, 1, 0, '0.00', '2017-06-25 12:53:00'),
-(21, 8, 'Samsung UE-32J4000AWXXH', '', 'Televizor Samsung UE-32J4000AWXXH', '', '32985.76', 0, 2, 0, '0.00', '2015-12-26 12:53:00'),
-(22, 8, 'Samsung UE-32K4102AKXXH', '', 'Televizor Samsung UE-32K4102AKXXH', '', '34323.32', 5, 2, 0, '0.00', '2016-11-27 12:53:00'),
-(23, 8, 'Samsung', '', 'Televizor Samsung', '', '11212.12', 0, 2, 0, '0.00', '2017-09-28 12:53:00'),
-(24, 7, 'LG 32LH510B', '', 'Televizor LG 32LH510B', '', '14544.32', 6, 2, 0, '0.00', '2017-01-29 12:53:00'),
-(25, 7, 'LG 32LH510U', '', 'Televizor LG 32LH510U', '', '12345.54', 8, 2, 0, '0.00', '2016-08-30 12:53:00'),
-(26, 9, 'Sony KD 65XE9005BAEP', '', 'Televizor Sony KD 65XE9005BAEP', '', '88989.33', 12, 2, 1, '10.00', '2015-07-01 12:53:00'),
-(27, 9, 'Sony LED LCD KDL 50W755CBAEP', '', 'Televizor Sony LED LCD KDL 50W755CBAEP', '', '72098.23', 2, 2, 0, '0.00', '2014-10-02 12:53:00'),
-(28, 9, 'Sony 40WD650BAEP', '', 'Televizor Sony 40WD650BAEP', '', '56765.32', 12, 2, 0, '0.00', '2013-10-03 12:53:00'),
-(29, 9, 'Sony TV KDL32WE615BAEP', '', 'Televizor Sony TV KDL32WE615BAEP', '', '32345.56', 4, 2, 0, '0.00', '2015-04-04 12:53:00'),
-(30, 2, 'Beko RCS A300K 20W', '', 'Frizider Beko RCS A300K 20W', '', '28999.99', 2, 3, 1, '5.00', '2013-07-05 12:53:00'),
-(31, 2, 'Beko DSA 28020', '', 'Frizider Beko DSA 28020', '', '27654.23', 1, 3, 0, '0.00', '2017-08-06 12:53:00'),
-(32, 4, 'Gorenje RC 4180 AW', '', 'Frizider Gorenje RC 4180 AW', '', '32456.65', 0, 3, 0, '0.00', '2014-01-07 12:53:00'),
-(33, 4, 'Gorenje RF 4120 AW', '', 'Frizider Gorenje RF 4120 AW', '', '21987.72', 3, 3, 0, '0.00', '2012-03-08 12:53:00'),
-(34, 3, 'Bosh KGN 36NL30', '', 'Frizider Bosh KGN 36NL30', '', '54320.43', 1, 3, 0, '0.00', '2013-07-09 12:53:00'),
-(35, 2, 'Beko WRE 5400 B', '', 'Ves Masina Beko WRE 5400 B', '', '19887.23', 1, 4, 0, '0.00', '2015-06-10 12:53:00'),
-(36, 4, 'Gorenje W 6723 S', '', 'Ves Masina Gorenje W 6723 S', '', '19932.23', 0, 4, 1, '30.00', '2014-01-11 12:53:00'),
-(37, 3, 'Bosh WAB 24262BY', '', 'Ves Masina Bosh WAB 24262BY', '', '32456.23', 3, 4, 0, '0.00', '2016-09-12 12:53:00'),
-(38, NULL, 'Whirpool AWOC 70100', '', 'Ves Masina Whirpool AWOC 70100', '', '26786.56', 1, 4, 0, '0.00', '2017-07-13 12:53:00');
+(7, 1, 'Apple iPhone7 32GB', '7_iphone.jpg', 'Mobilni Telefon Apple iPhone7 32GB', '', '100000.00', 23, 1, 1, '0.00', '2016-06-12 12:53:00'),
+(8, 1, 'Apple iPhone7 64GB', '8_iphone.jpg', 'Mobilni Telefon Apple iPhone7 64GB', '', '112345.12', 2, 1, 0, '0.00', '2016-12-13 13:53:00'),
+(9, 1, 'Apple iPhone7 32GB Gold', '9_iphone.jpg', 'Mobilni Telefon Apple iPhone7 32GB Gold', '', '101234.23', 1, 1, 0, '0.00', '2016-03-14 14:53:00'),
+(10, 1, 'Apple iPhone8 32GB', '10_iphone.jpg', 'Mobilni Telefon Apple iPhone8 32GB', '', '141889.32', 12, 1, 1, '15.00', '2017-04-15 15:53:00'),
+(11, 1, 'Apple iPhone8 64GB', '11_iphone.jpg', 'Mobilni Telefon Apple iPhone8 64GB', '', '151339.32', 2, 1, 0, '0.00', '2017-06-16 16:53:00'),
+(12, 1, 'Apple iPhone8 32GB Gold', '12_iphone.jpg', 'Mobilni Telefon Apple iPhone8 32GB Gold', '', '161323.37', 0, 1, 0, '0.00', '2017-08-17 17:53:00'),
+(13, 8, 'Samsung Galaxy S8', '13_iphone.jpg', 'Mobilni Telefon Samsung Galaxy S8', '', '99876.34', 12, 1, 0, '0.00', '2017-06-18 18:53:00'),
+(14, 8, 'Samsung Galaxy S7', '14_iphone.jpg', 'Mobilni Telefon Samsung Galaxy S7', '', '69887.34', 3, 1, 0, '0.00', '2016-07-19 14:53:00'),
+(15, 8, 'Samsung Galaxy S6', '15_iphone.jpg', 'Mobilni Telefon Samsung Galaxy S6', '', '55763.34', 3, 1, 0, '0.00', '2015-02-20 11:53:00'),
+(16, 6, 'Huawei P10', '16_iphone.jpg', 'Mobilni Telefon Huawei P10', '', '67898.77', 6, 1, 0, '0.00', '2016-11-21 12:53:00'),
+(17, 6, 'Huawei P9', '17_iphone.jpg', 'Mobilni Telefon Huawei P9', '', '65632.33', 12, 1, 0, '0.00', '2015-03-22 12:53:00'),
+(18, 5, 'HTC Desire 820', '18_iphone.jpg', 'Mobilni Telefon HTC Desire 820', '', '32456.76', 3, 1, 0, '0.00', '2014-08-23 12:53:00'),
+(19, 5, 'HTC One A9', '19_iphone.jpg', 'Mobilni Telefon HTC One A9', '', '42323.47', 11, 1, 1, '20.00', '2016-05-24 12:53:00'),
+(20, 5, 'HTC U11', '20_iphone.jpg', 'Mobilni Telefon HTC U11', '', '55736.43', 7, 1, 0, '0.00', '2017-06-25 12:53:00'),
+(21, 8, 'Samsung UE-32J4000AWXXH', '21_tv.jpg', 'Televizor Samsung UE-32J4000AWXXH', '', '32985.76', 0, 2, 0, '0.00', '2015-12-26 12:53:00'),
+(22, 8, 'Samsung UE-32K4102AKXXH', '22_tv.jpg', 'Televizor Samsung UE-32K4102AKXXH', '', '34323.32', 5, 2, 0, '0.00', '2016-11-27 12:53:00'),
+(23, 8, 'Samsung', '23_tv.jpg', 'Televizor Samsung', '', '11212.12', 0, 2, 0, '0.00', '2017-09-28 12:53:00'),
+(24, 7, 'LG 32LH510B', '24_tv.jpg', 'Televizor LG 32LH510B', '', '14544.32', 6, 2, 0, '0.00', '2017-01-29 12:53:00'),
+(25, 7, 'LG 32LH510U', '25_tv.jpg', 'Televizor LG 32LH510U', '', '12345.54', 8, 2, 0, '0.00', '2016-08-30 12:53:00'),
+(26, 9, 'Sony KD 65XE9005BAEP', '26_tv.jpg', 'Televizor Sony KD 65XE9005BAEP', '', '88989.33', 12, 2, 1, '10.00', '2015-07-01 12:53:00'),
+(27, 9, 'Sony LED LCD KDL 50W755CBAEP', '27_tv.jpg', 'Televizor Sony LED LCD KDL 50W755CBAEP', '', '72098.23', 2, 2, 0, '0.00', '2014-10-02 12:53:00'),
+(28, 9, 'Sony 40WD650BAEP', '28_tv.jpg', 'Televizor Sony 40WD650BAEP', '', '56765.32', 12, 2, 0, '0.00', '2013-10-03 12:53:00'),
+(29, 9, 'Sony TV KDL32WE615BAEP', '29_tv.jpg', 'Televizor Sony TV KDL32WE615BAEP', '', '32345.56', 4, 2, 0, '0.00', '2015-04-04 12:53:00'),
+(30, 2, 'Beko RCS A300K 20W', '30_frizider.jpg', 'Frizider Beko RCS A300K 20W', '', '28999.99', 2, 3, 1, '5.00', '2013-07-05 12:53:00'),
+(31, 2, 'Beko DSA 28020', '31_frizider.jpg', 'Frizider Beko DSA 28020', '', '27654.23', 1, 3, 0, '0.00', '2017-08-06 12:53:00'),
+(32, 4, 'Gorenje RC 4180 AW', '32_frizider.jpg', 'Frizider Gorenje RC 4180 AW', '', '32456.65', 0, 3, 0, '0.00', '2014-01-07 12:53:00'),
+(33, 4, 'Gorenje RF 4120 AW', '33_frizider.jpg', 'Frizider Gorenje RF 4120 AW', '', '21987.72', 3, 3, 0, '0.00', '2012-03-08 12:53:00'),
+(34, 3, 'Bosh KGN 36NL30', '34_frizider.jpg', 'Frizider Bosh KGN 36NL30', '', '54320.43', 1, 3, 0, '0.00', '2013-07-09 12:53:00'),
+(35, 2, 'Beko WRE 5400 B', '35_ves_masina.jpg', 'Ves Masina Beko WRE 5400 B', '', '19887.23', 1, 4, 0, '0.00', '2015-06-10 12:53:00'),
+(36, 4, 'Gorenje W 6723 S', '36_ves_masina.jpg', 'Ves Masina Gorenje W 6723 S', '', '19932.23', 0, 4, 1, '30.00', '2014-01-11 12:53:00'),
+(37, 3, 'Bosh WAB 24262BY', '37_ves_masina.jpg', 'Ves Masina Bosh WAB 24262BY', '', '32456.23', 3, 4, 0, '0.00', '2016-09-12 12:53:00'),
+(38, 4, 'Whirpool AWOC 70100', '38_ves_masina.jpg', 'Ves Masina Whirpool AWOC 70100', '', '26786.56', 1, 4, 0, '0.00', '2017-07-13 12:53:00');
 
 -- --------------------------------------------------------
 
@@ -257,8 +254,7 @@ INSERT INTO `sections` (`id`, `title`) VALUES
 (5, 'Crna hronika'),
 (7, 'DruÅ¡tvo'),
 (8, 'Vesti'),
-(9, 'Vremenska prognoza'),
-(11, 'Sport');
+(9, 'Vremenska prognoza');
 
 -- --------------------------------------------------------
 
@@ -292,9 +288,9 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` char(20) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `first_name` varchar(255) DEFAULT NULL,
-  `last_name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) NOT NULL,
+  `first_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
   `created_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -303,18 +299,13 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `first_name`, `last_name`, `created_at`) VALUES
-(1, 'aleksandar.dimic', 'd5908e4aa76277878259ed57c19c5f78', 'aleksandar.dimic@cubes.rs', 'Aleksandar', 'Dimic', '2017-11-17 14:00:24'),
-(2, 'cubes', 'd5908e4aa76277878259ed57c19c5f78', '', 'saa', 'sASA', '2017-11-17 14:45:03');
+(3, 'petar', '597e3b12820151caa6062612caec8056', 'petar.petrovic@gmail.com', 'Petar', 'Petrovic', '2017-11-26 23:12:49'),
+(4, 'cubes', 'cubes', 'cubes@gmail.com', 'Cubes', 'Cubessssss', '2017-11-26 23:14:46'),
+(5, 'dragana', '2556b815616dbac4fdca48e5ba147791', 'dragana.dragana@cubes.rs', 'Dragana', 'Draganaaaa', '2017-11-26 23:15:34');
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `brands`
---
-ALTER TABLE `brands`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `categories`
@@ -365,20 +356,21 @@ ALTER TABLE `tags`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- Indexes for table `users`
 --
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username_uniqe` (`username`);
 
 --
--- AUTO_INCREMENT for table `brands`
+-- AUTO_INCREMENT for dumped tables
 --
-ALTER TABLE `brands`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `groups`
@@ -390,7 +382,7 @@ ALTER TABLE `groups`
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `polaznici`
@@ -414,12 +406,18 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `sections`
 --
 ALTER TABLE `sections`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tags`
 --
 ALTER TABLE `tags`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 

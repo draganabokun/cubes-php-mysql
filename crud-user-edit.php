@@ -36,31 +36,30 @@ $formErrors = array();
 //odnosno da je korisnik pokrenuo neku akciju
 if (isset($_POST["task"]) && $_POST["task"] == "save") {
 	
-	/*********** filtriranje i validacija polja ****************/
-    
-    
-        	if (isset($_POST["username"]) && $_POST["username"] !== '') {
+	if (isset($_POST["username"]) && $_POST["username"] !== '') {
 		//Dodavanje parametara medju podatke u formi
 		$formData["username"] = $_POST["username"];
 		
 		//Filtering 1
 		$formData["username"] = trim($formData["username"]);
-
-                if (strlen($formData['username']) < 5) {
-                    $formErrors["username"][] = "Polje username mora imati 5 ili vise karaktera";
-                }
-                
-                $testUser = usersFetchOneByUsername($formData['username']);
-                
-                if (!empty($testUser) && $testUser['id'] != $user['id']) {
-                    $formErrors["username"][] = "Polje username je zauzet";
-                }
-                
-                
+		
+		if (strlen($formData["username"]) < 5) {
+			$formErrors["username"][] = "Username mora imati 5 ili vise karaktera";
+		}
+		
+		$testUser = usersFetchOneByUsername($formData["username"]);
+		
+		if (!empty($testUser) && $testUser['id'] != $user['id']) {
+			$formErrors["username"][] = "Username je zauzet";
+		}
+		
 		
 	} else {//Ovaj else ide samo ako je polje obavezno
 		$formErrors["username"][] = "Polje username je obavezno";
 	}
+	
+	
+	/*********** filtriranje i validacija polja ****************/
 	if (isset($_POST["email"]) && $_POST["email"] !== '') {
 		//Dodavanje parametara medju podatke u formi
 		$formData["email"] = $_POST["email"];
@@ -69,7 +68,7 @@ if (isset($_POST["task"]) && $_POST["task"] == "save") {
 		$formData["email"] = trim($formData["email"]);
 		
 		
-	} 
+	}
 	
 	if (isset($_POST["first_name"]) && $_POST["first_name"] !== '') {
 		//Dodavanje parametara medju podatke u formi
@@ -92,7 +91,10 @@ if (isset($_POST["task"]) && $_POST["task"] == "save") {
 		//Uradi akciju koju je korisnik trazio
 		
 		usersUpdateOneById($user['id'], $formData);
-                $_SESSION['system_message'] = "Uspesno ste sacuvali korisnika";
+		
+		
+        $_SESSION['system_message'] = "Uspesno ste izmenili profil korisnika " . $user['username'];
+		
 		header('Location: /crud-user-list.php');
 		
 		die();

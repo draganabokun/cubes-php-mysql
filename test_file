@@ -1,0 +1,36 @@
+
+ <ul class="dropdown-menu" role="menu">
+
+                                                <li><a href="/crud-product-list.php">Crud Products</a></li>
+                                                <li><a href="/crud-brand-list.php">Crud Brands</a></li>
+                                                <li><a href="/crud-category-list.php">Crud Categories</a></li>
+                                                <li><a href="/crud-group-list.php">Crud Groups</a></li>
+                                                <li><a href="/crud-tag-list.php">Crud Tags</a></li>
+                                                <li><a href="/crud-section-list.php">Crud Sections</a></li>
+                                                <li><a href="/crud-news-list.php">Crud News</a></li>
+                                                <li><a href="/crud-user-list.php">Crud Users</a></li>
+                                                <li><hr></li>
+
+
+
+
+                                    <li>
+                                        <a href="/sale.php"><i class="fa fa-star"></i> Akcija</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/all-news.php">Sve vesti</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sekcije</a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <?php foreach (sectionsFetchAll() as $sectionInMenu) { ?>
+                                                <li>
+                                                    <a href="/news-section.php?id=<?php echo htmlspecialchars($sectionInMenu['id']); ?>">
+                                                        <?php echo htmlspecialchars($sectionInMenu['title']); ?>
+                                                    </a>
+                                                </li>
+                                            <?php } ?>
+
+                                        </ul>
+                                    </li>

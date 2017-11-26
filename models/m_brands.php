@@ -103,3 +103,16 @@ function brandsGetList() {
 	
 	return $brandList;
 }
+
+/**
+ * 
+ * @return array Array of associative arrays of 6 rendom brands
+ */
+function brandsRandom() {
+    	$query = "SELECT `brands`.* "
+                . "FROM `brands` "
+                . "ORDER BY RAND() "
+                . "LIMIT 6";
+        
+        return dbFetchAll($query);
+}

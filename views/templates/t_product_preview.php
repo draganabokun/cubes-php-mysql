@@ -8,10 +8,11 @@
 			>
 		</a>
 		<h3 class="title">
-			<a href="/product.php?id=<?php echo $product['id'];?>">
-				<?php echo htmlspecialchars($product['brand_title']);?> 
+			<a href="/brand.php?id=<?php echo $product['brand_id'];?>">
+				<?php echo htmlspecialchars($product['brand_title']);?></a>
 				- 
-				<?php echo htmlspecialchars($product['title']);?>
+                        <a href="/product.php?id=<?php echo $product['id'];?>">
+                            <?php echo htmlspecialchars($product['title']);?>
 			</a>
 		</h3>
 		<div class="row">

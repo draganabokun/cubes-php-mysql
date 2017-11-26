@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 require_once __DIR__ . '/models/m_users.php';
@@ -114,8 +113,6 @@ if (isset($_POST["task"]) && $_POST["task"] == "insert") {
     //Ukoliko nema gresaka 
     if (empty($formErrors)) {
         //Uradi akciju koju je korisnik trazio
-        
-        $formData['created_at'] = date('Y-m-d H:i:s');
          
         $latestNewsId = newsInsertOne($formData);
 
@@ -126,6 +123,8 @@ if (isset($_POST["task"]) && $_POST["task"] == "insert") {
         if (move_uploaded_file($photoFileTmpPath, $destinationPath)) {
 
             newsUpdatePhotoFileName($latestNewsId, $latestNewsPhotoFileName);
+            
+            $_SESSION['system_message'] = "Uspesno ste sacuvali novu vest " .  $formData['title'];
 
             header('Location: /crud-news-list.php');
             die();

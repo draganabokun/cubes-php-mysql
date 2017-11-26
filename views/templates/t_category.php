@@ -3,7 +3,7 @@
 			<div class="container">
 				<div class="header">
 					<h2 class="page-title">
-						<span>Proizvodi iz kategoije: <?php echo htmlspecialchars($category['title'])?></span> 
+						<span>Proizvodi iz kategorije: <?php echo htmlspecialchars($category['title'])?></span> 
 						<small><?php echo $totalRows;?> proizvoda</small>
 					</h2>
 				</div>

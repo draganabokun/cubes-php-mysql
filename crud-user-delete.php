@@ -25,6 +25,8 @@ if (isset($_POST["task"]) && $_POST["task"] == "delete") {
 	
 	usersDeleteOneById($user['id']);
 
+    $_SESSION['system_message'] = "Uspesno ste obrisali korisnika " . $user['username'];
+			
 	header('Location: /crud-user-list.php');
 	die();
 }

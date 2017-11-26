@@ -27,6 +27,8 @@ function usersFetchOneById($id) {
 }
 
 function usersFetchOneByUsername($username) {
+    
+    $link = dbGetLink();
 	
 	$query = "SELECT `users`.* "
 			. "FROM `users` "
@@ -112,6 +114,7 @@ function usersGetCount() {
  */
 function checkCredentials($username, $password) {
     
+    
     $user = usersFetchOneByUsername($username);
     
     if (!empty($user))
@@ -137,3 +140,5 @@ function isUserLoggedIn() {
 	
 	return true;
 }
+
+

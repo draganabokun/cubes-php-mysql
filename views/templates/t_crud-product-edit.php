@@ -15,7 +15,7 @@
 				<div class="row">
 					<div class="col-md-12">
 						<h2>
-							CRUD Product - Edit product #
+							CRUD Product - Edit product #<?php echo htmlspecialchars($product['id']); ?>
 						</h2>
 					</div>
 				</div>
@@ -157,7 +157,7 @@
 								<legend>Photo</legend>
 								<div class="row">
 									<div class="col-md-8 col-md-offset-2">
-										<img src="/uploads/products/<?php echo htmlspecialchars($product['photo_filename']); ?>" class="img-responsive">
+										<img src="/uploads/products/<?php echo htmlspecialchars($product['photo_filename']);?>" class="img-responsive">
 									</div>
 								</div>
 								<div class="form-group">

@@ -48,6 +48,8 @@ function newsDeleteOneById($id) {
  * @return type
  */
 function newsInsertOne(array $data) {
+    
+        $data['created_at'] = date('Y-m-d H:i:s');
 	
 	$columnsPart = "(`" . implode('`, `', array_keys($data)) . "`)";
 	
@@ -66,6 +68,7 @@ function newsInsertOne(array $data) {
 	
 	return dbLastInsertId();
 }
+        
 
 function newsUpdateOneById($id, $data) {
 	
@@ -85,7 +88,7 @@ function newsUpdateOneById($id, $data) {
 /**
  * @return int Count of all rows in table
  */
-function newsGetCount($sectionId) {
+function newsGetCountBySection($sectionId) {
 	$link = dbGetLink();
 	
 	$query = "SELECT COUNT(`id`) FROM `news` WHERE `section_id`= '" . $sectionId . "'";
@@ -93,6 +96,16 @@ function newsGetCount($sectionId) {
 	return dbFetchColumn($query);
 }
 
+/**
+ * @return int Count of all rows in table
+ */
+function newsGetCount() {
+	$link = dbGetLink();
+	
+	$query = "SELECT COUNT(`id`) FROM `news`";
+	
+	return dbFetchColumn($query);
+}
 
 
 function newsUpdatePhotoFileName($id, $photoFileName) {
@@ -101,4 +114,36 @@ function newsUpdatePhotoFileName($id, $photoFileName) {
 			. "WHERE id = '" . dbEscape($id) . "'";
 	
 	return dbQuery($query);
+}
+
+function newsFetchAllByPage($page, $rowsPerPage) {
+    	$query = "SELECT `news`.*, "
+			. "`sections`.`title` AS section_title "
+			. "FROM `news` "
+			. "LEFT JOIN `sections` ON `news`.`section_id` = `sections`.`id` ";
+        
+        $limit = $rowsPerPage;
+        $offset = ($page - 1) * $rowsPerPage;
+        
+        $query .= " LIMIT " . $limit . " OFFSET " . $offset;
+        
+        return dbFetchAll($query);
+}
+
+function newsFetchAllBySectionByPage ($sectionId, $page, $rowsPerPage)
+{
+                  $query = "SELECT "
+			. "`news`.*, "
+			. "`sections`.`title` AS section_title "
+			. "FROM `news` "
+			. "LEFT JOIN `sections` ON `news`.`section_id` = `sections`.`id` "
+                        . "WHERE `news`.`section_id` = '" . dbEscape($sectionId) . "' ";  
+                          
+        $limit = $rowsPerPage;
+        $offset = ($page - 1) * $rowsPerPage;
+        
+        $query .= " LIMIT " . $limit . " OFFSET " . $offset;
+        
+        return dbFetchAll($query);
+    
 }

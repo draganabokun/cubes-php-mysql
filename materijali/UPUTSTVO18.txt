@@ -1,0 +1,11 @@
+Neophodno je napraviti stranice:
+
+	- /all-news.php za prikaz svih vesti
+	- /news-section.php za prikaz vesti iz jedne sekcije
+	- /one-news.php za prikaz jedne vesti
+
+U stranicama za prikaz svih vesti i za prikaz vesti iz sekcije KORISTITI PAGINACIJU!!!
+
+Dati su vam template-i t_all-news.php, t_news-section.php, t_one-news.php koji trebaju da se zavrse!
+
+Veliki pozdrav!

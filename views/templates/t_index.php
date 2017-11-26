@@ -74,7 +74,7 @@
                 <small><a href="/sale.php">Vidi sve</a></small>
             </h2>
             <ul class="thumbnails row projects">
-                <?php for ($i = 1; $i <= 4; $i ++) { ?>
+                <?php foreach ($products as $product) { ?>
                     <li class="col-md-3">
                         <?php include __DIR__ . '/t_product_preview.php'; ?>
                     </li>
