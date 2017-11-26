@@ -90,7 +90,7 @@ function tagsGetCount() {
 
 function tagsFetchAllByProduct ($productId){
     
-    	$query = "SELECT tags.* FROM `tags` JOIN product_tags ON tags.id = product_tags.tag_id WHERE product_tags.product_id = '" . dbEscape($productId) . "'";
+    	$query = "SELECT tags.* FROM `tags` JOIN product-tags ON tags.id = product-tags.tag_id WHERE product-tags.product_id = '" . dbEscape($productId) . "'";
 	
 	
 	return dbFetchAll($query);
