@@ -78,12 +78,7 @@ if (isset($_POST["task"]) && $_POST["task"] == "insert") {
         //Filtering 1
         $formData["discount"] = trim($formData["discount"]);
         //Filtering 2
-        //Filtering 3
-        //Filtering 4
-        //...
-        //Validation 2
-        //Validation 3
-        //Validation 4
+  
         //...
     }
 
@@ -94,13 +89,7 @@ if (isset($_POST["task"]) && $_POST["task"] == "insert") {
         //Filtering 1
         $formData["description"] = trim($formData["description"]);
         //Filtering 2
-        //Filtering 3
-        //Filtering 4
-        //...
-        //Validation 2
-        //Validation 3
-        //Validation 4
-        //...
+
     }
 
     if (isset($_POST["specification"]) && $_POST["specification"] !== '') {
@@ -110,12 +99,7 @@ if (isset($_POST["task"]) && $_POST["task"] == "insert") {
         //Filtering 1
         $formData["specification"] = trim($formData["specification"]);
         //Filtering 2
-        //Filtering 3
-        //Filtering 4
-        //...
-        //Validation 2
-        //Validation 3
-        //Validation 4
+
         //...
     } else {//Ovaj else ide samo ako je polje obavezno
         $formErrors["specification"][] = "Polje specification je obavezno";
@@ -159,8 +143,7 @@ if (isset($_POST["task"]) && $_POST["task"] == "insert") {
             $formErrors["category_id"][] = "Izabrali ste neodgovarajucu kategoriju.";
         }
         //Validation 2
-        //Validation 3
-        //...
+
     } else {//Ovaj else ide samo ako je polje obavezno
         $formErrors["category_id"][] = "Polje category_id je obavezno";
     }
@@ -181,8 +164,7 @@ if (isset($_POST["task"]) && $_POST["task"] == "insert") {
         }
 
         //Validation 2
-        //Validation 3
-        //...
+
     } else {//Ovaj else ide samo ako je polje obavezno
         $formErrors["brand_id"][] = "Polje brand_id je obavezno";
     }

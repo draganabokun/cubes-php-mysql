@@ -273,7 +273,6 @@ function productsGetCountByGroup($groupId) {
             . "COUNT(`products`.`id`) "
             . "FROM `products` "
             . "LEFT JOIN `categories` ON `products`.`category_id` = `categories`.`id` "
-            . "LEFT JOIN `brands` ON `products`.`brand_id` = `brands`.`id` "
             . "WHERE `categories`.`group_id` = '" . dbEscape($groupId) . "' ";
 
     return dbFetchColumn($query);

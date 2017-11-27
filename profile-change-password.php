@@ -60,6 +60,8 @@ if (isset($_POST["task"]) && $_POST["task"] == "save") {
             
                 unset($formData['confirm_password']);
                 
+                $formData['password'] = md5($formData['password']);
+                
 		usersUpdateOneById($user['id'], $formData);
                 
                 $_SESSION['system_message'] = "Uspesno ste promenili lozinku";

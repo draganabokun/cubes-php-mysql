@@ -22,7 +22,7 @@
                 <img 
                     class="img-responsive center-block" 
                     alt="<?php echo htmlspecialchars($product['title']); ?>" 
-                    src="/uploads/products/<?php echo htmlspecialchars($product['photo_file_name']); ?>"
+                    src="/uploads/products/<?php echo htmlspecialchars($product['photo_filename']); ?>"
                     >
             </div>
             <div class="col-md-5 sidebar sidebar-right">

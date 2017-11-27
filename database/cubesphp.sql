@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2017 at 12:19 AM
+-- Generation Time: Nov 27, 2017 at 10:55 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -95,7 +95,7 @@ CREATE TABLE `groups` (
 INSERT INTO `groups` (`id`, `title`) VALUES
 (1, 'Mobilni Uredjaji'),
 (2, 'Bela Tehnika'),
-(3, 'Racunari');
+(4, 'Racunari');
 
 -- --------------------------------------------------------
 
@@ -299,9 +299,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `first_name`, `last_name`, `created_at`) VALUES
-(3, 'petar', '597e3b12820151caa6062612caec8056', 'petar.petrovic@gmail.com', 'Petar', 'Petrovic', '2017-11-26 23:12:49'),
-(4, 'cubes', 'cubes', 'cubes@gmail.com', 'Cubes', 'Cubessssss', '2017-11-26 23:14:46'),
-(5, 'dragana', '2556b815616dbac4fdca48e5ba147791', 'dragana.dragana@cubes.rs', 'Dragana', 'Draganaaaa', '2017-11-26 23:15:34');
+(3, 'petar', 'd5908e4aa76277878259ed57c19c5f78', 'petar.petrovic@gmail.com', 'Petar', 'Petrovic', '2017-11-26 23:12:49'),
+(5, 'dragana', 'd5908e4aa76277878259ed57c19c5f78', 'dragana.dragana@cubes.rs', 'Dragana', 'Draganaaaa', '2017-11-26 23:15:34'),
+(6, 'cubes', 'd5908e4aa76277878259ed57c19c5f78', 'cubes@gmail.com', 'Cubes', 'Cubess', '2017-11-27 22:43:57');
 
 --
 -- Indexes for dumped tables
@@ -376,7 +376,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `groups`
 --
 ALTER TABLE `groups`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `news`
@@ -418,7 +418,7 @@ ALTER TABLE `tags`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
